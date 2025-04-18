@@ -9,8 +9,16 @@ public class Mover : MonoBehaviour
     [SerializeField] private CharacterController _characterController;
 
     private void Update()
+        => MoveCharacter();
+
+    public void IncreaseMoveSpeed(float speed)
     {
-        MoveCharacter();
+        if(speed <= 0) 
+            return;
+
+        _movingSpeed += speed;
+
+        Debug.Log($"Скорость была увеличена, новое значение: {_movingSpeed}");
     }
 
     private void MoveCharacter()
