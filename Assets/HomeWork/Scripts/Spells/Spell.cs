@@ -8,6 +8,6 @@ public abstract class Spell : MonoBehaviour
 
     public virtual void Use(Character character)
     {
-        Destroy(this.gameObject);
+        Destroy(gameObject);
     }
 }

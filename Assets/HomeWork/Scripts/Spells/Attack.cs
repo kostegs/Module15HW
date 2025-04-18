@@ -6,6 +6,8 @@ public class Attack : Spell
 
     public override void Use(Character gameObject)
     {
-        
+        base.Use(gameObject);
+
+        Projectile projectile = Instantiate(_projectile, transform.position, transform.rotation);        
     }
 }

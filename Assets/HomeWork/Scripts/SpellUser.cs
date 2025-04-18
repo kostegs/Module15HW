@@ -11,6 +11,13 @@ public class SpellUser : MonoBehaviour
         if (_userInput.SpellKeyPressed)
         {
             Spell currentSpell = _spellCollector.CurrentSpell;
+
+            if(currentSpell == null)
+            {
+                Debug.Log("У персонажа нет предметов для использования");
+                return;
+            }
+
             currentSpell.Use(_character);
             _spellCollector.RemoveCurrentSpell();
         }
