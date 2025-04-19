@@ -8,15 +8,13 @@ public class IncreaseSpeed : Spell
     {
         Mover mover = character.GetComponent<Mover>();
 
-        if (mover != null)
-        {
-            mover.IncreaseMoveSpeed(_speedIncreaseAmount);
-            AddEffect(character.SpellEffectPoint);
-        }            
-        else
+        if (mover == null)
         {
             Debug.Log("У текущего игрока отсутствует возможность увеличивать скорость!");
+            return;
         }
-            
+
+        mover.IncreaseMoveSpeed(_speedIncreaseAmount);
+        AddEffect(character.SpellEffectPoint);            
     }
 }

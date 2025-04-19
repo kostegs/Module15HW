@@ -8,15 +8,13 @@ public class IncreaseHealth : Spell
     {
         Health health = character.GetComponent<Health>();
 
-        if (health != null)
-        {
-            health.IncreaseHealthCount(_healthIncreaseAmount);
-            AddEffect(character.SpellEffectPoint);
-        }
-        else
+        if (health == null)
         {
             Debug.Log("У текущего игрока отсутствует возможность увеличивать здоровье!");
+            return;
         }
-            
+
+        health.IncreaseHealthCount(_healthIncreaseAmount);
+        AddEffect(character.SpellEffectPoint);            
     }
 }
