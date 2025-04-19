@@ -21,6 +21,7 @@ public class SpellCollector : MonoBehaviour
             _currentSpell = spell;
             other.gameObject.transform.parent = _spellStorageTransform;
             other.gameObject.transform.localPosition = Vector3.zero;
+            other.gameObject.transform.localRotation = Quaternion.identity;
             Debug.Log($"Вы подобрали навык: {_currentSpell.SpellName}");
         }            
     }

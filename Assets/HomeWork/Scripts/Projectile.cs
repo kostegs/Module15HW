@@ -6,9 +6,13 @@ public class Projectile : MonoBehaviour
     [SerializeField] private float _timeToLive;
 
     private float _timer;
+    private Rigidbody _rigidbody;
 
     private void Awake()
-        => _timer = _timeToLive;
+    {
+        _timer = _timeToLive;
+        _rigidbody = GetComponent<Rigidbody>();
+    }        
 
     void Update()
     {        
@@ -17,7 +21,7 @@ public class Projectile : MonoBehaviour
         if (_timer <= 0)
             Destroy(gameObject);
 
-        Vector3 direction = transform.forward.normalized * _speed * Time.deltaTime;
-        transform.Translate(direction);
+        Vector3 direction = transform.forward;
+        _rigidbody.AddForce(direction * _speed * Time.deltaTime, ForceMode.Impulse);
     }
 }
