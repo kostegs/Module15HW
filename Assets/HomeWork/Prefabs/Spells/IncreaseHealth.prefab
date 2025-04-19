@@ -119,4 +119,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spellName: "\u0423\u0432\u0435\u043B\u0438\u0447\u0435\u043D\u0438\u0435 \u0437\u0434\u043E\u0440\u043E\u0432\u044C\u044F"
+  _effectPrefab: {fileID: 921356687595118182, guid: 7c4cbe8500b239d48baa353f762d21a1,
+    type: 3}
   _healthIncreaseAmount: 10

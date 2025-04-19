@@ -119,4 +119,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spellName: "\u0423\u0432\u0435\u043B\u0438\u0447\u0435\u043D\u0438\u0435 \u0441\u043A\u043E\u0440\u043E\u0441\u0442\u0438"
-  _speedIncreaseAmount: 5
+  _effectPrefab: {fileID: 6404225918342690540, guid: ec301e602c1d3ab4288bd6f4f0b25d3f,
+    type: 3}
+  _speedIncreaseAmount: 3

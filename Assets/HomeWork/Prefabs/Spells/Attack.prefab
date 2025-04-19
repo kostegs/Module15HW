@@ -119,5 +119,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spellName: "\u0410\u0442\u0430\u043A\u0430"
+  _effectPrefab: {fileID: 466433359704924745, guid: d2fcdbf8372c1a94cb5891fed80e019a,
+    type: 3}
   _projectile: {fileID: 1763105875992459974, guid: 24204a1fbc1800e4f8ae412d00c3373c,
     type: 3}

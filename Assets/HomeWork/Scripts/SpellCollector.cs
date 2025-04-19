@@ -11,7 +11,7 @@ public class SpellCollector : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (_currentSpell != null)
+        if (_currentSpell != null && _currentSpell.gameObject != null)
             return;
 
         Spell spell = other.gameObject.GetComponent<Spell>();

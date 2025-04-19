@@ -19,7 +19,7 @@ public class SpellUser : MonoBehaviour
             }
 
             currentSpell.Use(_character);
-            _spellCollector.RemoveCurrentSpell();
+            Destroy(currentSpell.gameObject);            
         }
     }
 }

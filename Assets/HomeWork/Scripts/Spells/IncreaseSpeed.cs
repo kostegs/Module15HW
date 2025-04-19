@@ -6,13 +6,17 @@ public class IncreaseSpeed : Spell
 
     public override void Use(Character character)
     {
-        base.Use(character);
-
         Mover mover = character.GetComponent<Mover>();
 
         if (mover != null)
+        {
             mover.IncreaseMoveSpeed(_speedIncreaseAmount);
+            AddEffect(character.SpellEffectPoint);
+        }            
         else
+        {
             Debug.Log("У текущего игрока отсутствует возможность увеличивать скорость!");
+        }
+            
     }
 }
